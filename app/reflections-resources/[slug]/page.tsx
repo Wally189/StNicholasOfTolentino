@@ -20,7 +20,7 @@ export default async function ReflectionDetailPage({ params }: { params: Promise
         <div className="site-width">
           <h1>{reflection.frontmatter.title}</h1>
           <p className="muted">
-            {reflection.frontmatter.author ? `${reflection.frontmatter.author} · ` : ""}
+            {reflection.frontmatter.author ? `${reflection.frontmatter.author} Â· ` : ""}
             {formatDisplayDate(reflection.frontmatter.date)}
           </p>
           <p>{reflection.frontmatter.summary}</p>

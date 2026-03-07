@@ -5,6 +5,7 @@ import type {
   Bulletin,
   Event,
   NewsItem,
+  ParishContent,
   ParsedItem,
   Reflection,
   StaticPage
@@ -59,7 +60,7 @@ export function getStaticPages(): StaticPage[] {
   return sortByDateDesc(parseCollection<StaticPage>("pages"));
 }
 
-function readBySlug<T>(folder: string, slug: string): ParsedItem<T> | null {
+function readBySlug<T extends ParishContent>(folder: string, slug: string): ParsedItem<T> | null {
   const filePath = path.join(contentRoot, folder, `${slug}.md`);
   if (!fs.existsSync(filePath)) {
     return null;

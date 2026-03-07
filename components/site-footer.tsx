@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export function SiteFooter() {
+  const dateTime = new Date().toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" });
   return (
     <footer className="site-footer" aria-label="Parish footer">
       <div className="site-width footer-grid">
@@ -46,13 +47,21 @@ export function SiteFooter() {
           Part of the Catholic Diocese of Clifton. Registered charity details, privacy notice, and safeguarding policy
           are available via diocesan links.
         </p>
-        <p>
-          A{" "}
-          <a href="https://www.waylight-atlantic.co.uk" target="_blank" rel="noreferrer">
-            Waylight-Atlantic
-          </a>{" "}
-          website
+        <p style={{ textAlign: "right" }}>
+          <span data-datetime>{dateTime}</span>
         </p>
+        <div className="waylight-legal-block" data-waylight-legal style={{ textAlign: "right" }}>
+          <p className="waylight-legal-links">
+            <Link href="/gdpr">GDPR</Link> | <Link href="/privacy">Privacy</Link> | <Link href="/terms">Terms</Link>
+          </p>
+          <p className="waylight-legal-location">Bristol, United Kingdom</p>
+          <p className="waylight-legal-copyright">
+            &copy; 2026{" "}
+            <a href="https://www.waylight-atlantic.co.uk/" target="_blank" rel="noreferrer">
+              Waylight Atlantic
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );

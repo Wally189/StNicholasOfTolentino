@@ -1,6 +1,6 @@
 ---
 model: NewsItem
-title: Highlights of the Week: School and Parish Feast Celebration
+title: "Highlights of the Week: School and Parish Feast Celebration"
 date: 2026-02-17
 summary: Children and families marked the feast with prayer and song.
 slug: highlights-feast-celebration

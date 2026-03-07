@@ -1,25 +1,13 @@
 import Link from "next/link";
 import { formatDisplayDate, getBulletins, getEvents, getNewsItems } from "@/lib/content";
 
-type Filter = "highlights" | "diary" | "bulletins";
-
-const filters: { label: string; value: Filter }[] = [
+const sections = [
   { label: "Highlights", value: "highlights" },
   { label: "Diary", value: "diary" },
   { label: "Bulletins", value: "bulletins" }
 ];
 
-export default function ParishNewsPage({
-  searchParams
-}: {
-  searchParams?: {
-    filter?: Filter;
-  };
-}) {
-  const rawFilter = searchParams?.filter;
-  const selected: Filter =
-    rawFilter === "highlights" || rawFilter === "diary" || rawFilter === "bulletins" ? rawFilter : "highlights";
-
+export default function ParishNewsPage() {
   const highlights = getNewsItems();
   const events = getEvents().sort((a, b) => +new Date(a.date) - +new Date(b.date));
   const bulletins = getBulletins();
@@ -39,18 +27,15 @@ export default function ParishNewsPage({
       <section className="section">
         <div className="site-width">
           <div className="cta-row" aria-label="News filters">
-            {filters.map((filter) => (
-              <Link
-                key={filter.value}
-                href={`/parish-news?filter=${filter.value}`}
-                className={`button${selected === filter.value ? " primary" : ""}`}
-              >
-                {filter.label}
-              </Link>
+            {sections.map((section) => (
+              <a key={section.value} href={`#${section.value}`} className="button">
+                {section.label}
+              </a>
             ))}
           </div>
 
-          {selected === "highlights" ? (
+          <section id="highlights" className="typographic-block">
+            <h2>Highlights</h2>
             <ul className="editorial-list" aria-label="Highlights list">
               {highlights.map((item) => (
                 <li key={item.slug}>
@@ -63,9 +48,10 @@ export default function ParishNewsPage({
                 </li>
               ))}
             </ul>
-          ) : null}
+          </section>
 
-          {selected === "diary" ? (
+          <section id="diary" className="typographic-block">
+            <h2>Diary</h2>
             <ul className="editorial-list" aria-label="Diary list">
               {events.map((event) => (
                 <li key={event.slug}>
@@ -75,9 +61,10 @@ export default function ParishNewsPage({
                 </li>
               ))}
             </ul>
-          ) : null}
+          </section>
 
-          {selected === "bulletins" ? (
+          <section id="bulletins" className="typographic-block">
+            <h2>Bulletins</h2>
             <ul className="editorial-list" aria-label="Bulletin list">
               {bulletins.map((bulletin) => (
                 <li key={bulletin.slug}>
@@ -87,7 +74,7 @@ export default function ParishNewsPage({
                 </li>
               ))}
             </ul>
-          ) : null}
+          </section>
         </div>
       </section>
     </>

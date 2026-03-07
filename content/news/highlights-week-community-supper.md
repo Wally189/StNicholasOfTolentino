@@ -1,6 +1,6 @@
 ---
 model: NewsItem
-title: Highlights of the Week: Community Supper and Prayer
+title: "Highlights of the Week: Community Supper and Prayer"
 date: 2026-03-03
 summary: A short pastoral summary of parish life this week.
 slug: highlights-week-community-supper

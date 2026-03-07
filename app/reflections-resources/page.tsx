@@ -3,21 +3,8 @@ import { formatDisplayDate, getReflections } from "@/lib/content";
 
 const categories = ["Spiritual Reflection", "Pope Francis' Words", "Penitential Rites", "Bidding Prayers"] as const;
 
-type ReflectionCategory = (typeof categories)[number];
-
-export default function ReflectionsPage({
-  searchParams
-}: {
-  searchParams?: {
-    category?: ReflectionCategory;
-  };
-}) {
-  const rawCategory = searchParams?.category;
-  const selected: ReflectionCategory = categories.includes(rawCategory as ReflectionCategory)
-    ? (rawCategory as ReflectionCategory)
-    : "Spiritual Reflection";
-
-  const reflections = getReflections().filter((item) => item.category === selected);
+export default function ReflectionsPage() {
+  const reflections = getReflections();
 
   return (
     <>
@@ -34,15 +21,22 @@ export default function ReflectionsPage({
       <section className="section">
         <div className="site-width aside-layout">
           <div>
-            <ul className="editorial-list" aria-label="Reflection posts">
-              {reflections.map((item) => (
-                <li key={item.slug}>
-                  <span className="item-meta">{formatDisplayDate(item.date)}</span>
-                  <Link href={`/reflections-resources/${item.slug}`}>{item.title}</Link>
-                  <span>{item.summary}</span>
-                </li>
-              ))}
-            </ul>
+            {categories.map((category) => (
+              <section key={category} id={encodeURIComponent(category)} className="typographic-block">
+                <h2>{category}</h2>
+                <ul className="editorial-list" aria-label={`${category} posts`}>
+                  {reflections
+                    .filter((item) => item.category === category)
+                    .map((item) => (
+                      <li key={item.slug}>
+                        <span className="item-meta">{formatDisplayDate(item.date)}</span>
+                        <Link href={`/reflections-resources/${item.slug}`}>{item.title}</Link>
+                        <span>{item.summary}</span>
+                      </li>
+                    ))}
+                </ul>
+              </section>
+            ))}
           </div>
 
           <aside className="sidebar-list" aria-label="Reflection categories">
@@ -50,7 +44,7 @@ export default function ReflectionsPage({
             <ul>
               {categories.map((category) => (
                 <li key={category}>
-                  <Link href={`/reflections-resources?category=${encodeURIComponent(category)}`}>{category}</Link>
+                  <a href={`#${encodeURIComponent(category)}`}>{category}</a>
                 </li>
               ))}
             </ul>
