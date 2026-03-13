@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | St Nicholas of Tolentino</title>
+  <style>
+    :root {
+      --navy: #1f3a5f;
+      --gold: #c8a45c;
+      --light: #f7f7f7;
+      --border: rgba(31, 58, 95, 0.12);
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, sans-serif;
+      background: var(--light);
+    }
+
+    .admin-help {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid var(--border);
+      background: #ffffff;
+      color: var(--navy);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .admin-help a {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .admin-help strong {
+      color: var(--gold);
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-help">
+    <strong>Editing help:</strong>
+    Read <a href="../how-to-update.html" target="_blank" rel="noreferrer">How to Update This Website</a>
+    before making changes. Most people will only need: <strong>Weekly Newsletter PDF</strong>,
+    <strong>Mass Times, Contact and Safeguarding</strong>, or <strong>Homepage Welcome and Images</strong>.
+  </div>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script src="https://unpkg.com/decap-cms@^3.8.3/dist/decap-cms.js"></script>
+</body>
+</html>

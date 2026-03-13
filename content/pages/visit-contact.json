@@ -1,0 +1,47 @@
+{
+  "hero": {
+    "eyebrow": "Visit / Contact",
+    "title": "Practical information presented with clarity and warmth",
+    "lede": "Church address, parish office hours, clergy contacts, parking information, and support routes published by St Nick's.",
+    "image": "/uploads/hero-community.jpg"
+  },
+  "intro": {
+    "eyebrow": "Visit St Nick's",
+    "title": "Keep the essentials close to hand",
+    "body": "The parish lists separate addresses for the church, presbytery, and parish office, plus parking, priest contact details, and safeguarding routes through the Diocese of Clifton."
+  },
+  "cards": [
+    {
+      "id": "location-map",
+      "meta": "Addresses",
+      "title": "Location & Map",
+      "paragraphs": [
+        "Church, presbytery, parish office, and parking details are kept in the shared parish settings."
+      ]
+    },
+    {
+      "id": "office-hours",
+      "meta": "Office hours",
+      "title": "Office Hours",
+      "paragraphs": [
+        "The homepage and footer use the same office details so parish enquiries stay consistent."
+      ]
+    },
+    {
+      "id": "contact-details-page",
+      "meta": "Clergy and office",
+      "title": "Contact Details",
+      "paragraphs": [
+        "Parish priest and office details are managed in one place and reused across the site."
+      ]
+    },
+    {
+      "id": "donations",
+      "meta": "Support the mission",
+      "title": "Donations",
+      "paragraphs": [
+        "Use the parish giving link for St Nicholas itself, then follow the other links for St Nicholas Bread and Borderlands."
+      ]
+    }
+  ]
+}

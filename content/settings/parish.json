@@ -1,0 +1,246 @@
+{
+  "nextMass": {
+    "eyebrow": "Next Mass",
+    "title": "Sunday Parish Eucharist",
+    "meta": "Sunday, 10:00am - Church nave and livestream",
+    "body": "The current parish schedule also lists Thursday and Friday Adoration at 11:30am, Mass at 12:00 noon, and Stations of the Cross on Sunday at about 12:30pm.",
+    "note": "This week's published timetable also includes a Friday Lenten Area House Mass at 7:00pm at 8 Ingmire Road, Eastville, BS5 6XD."
+  },
+  "massTimes": {
+    "quickCards": [
+      {
+        "title": "Sunday",
+        "items": [
+          "10:00am Parish Mass with livestream",
+          "First Sunday: Signed Parish Mass for the Deaf Community",
+          "Approx. 12:30pm Stations of the Cross"
+        ]
+      },
+      {
+        "title": "Weekdays",
+        "items": [
+          "Thursday 11:30am Adoration",
+          "Thursday 12:00 noon Mass",
+          "Friday 11:30am Adoration and 12:00 noon Mass"
+        ]
+      },
+      {
+        "title": "Confession",
+        "items": [
+          "Saturday after Mass",
+          "Saturday 4:00pm-4:30pm",
+          "Sacramental enquiries through the parish office"
+        ]
+      },
+      {
+        "title": "Livestream",
+        "items": [
+          "Sunday 10:00am Parish Mass"
+        ],
+        "links": [
+          {
+            "label": "Direct Vimeo livestream",
+            "url": "https://vimeo.com/event/282657"
+          },
+          {
+            "label": "Mass and livestream details on this site",
+            "url": "mass-services.html#livestream"
+          }
+        ]
+      }
+    ],
+    "serviceCards": [
+      {
+        "id": "mass-times",
+        "meta": "Current parish times",
+        "title": "Mass Times",
+        "paragraphs": [
+          "Sunday Parish Mass is currently published at 10:00am.",
+          "The parish site also lists weekday liturgy on Thursday and Friday, with seasonal liturgies announced in the weekly highlights and diary."
+        ],
+        "items": [
+          "Sunday Parish Mass: 10:00am",
+          "Thursday Adoration: 11:30am, Mass: 12:00 noon",
+          "Friday Adoration: 11:30am, Mass: 12:00 noon",
+          "This week's Friday Lenten Area House Mass: 7:00pm at 8 Ingmire Road, Eastville, BS5 6XD"
+        ],
+        "links": [
+          {
+            "label": "Mass times on this site",
+            "url": "mass-services.html#mass-times"
+          }
+        ]
+      },
+      {
+        "id": "livestream",
+        "meta": "Watch online",
+        "title": "Livestream",
+        "paragraphs": [
+          "Sunday 10:00am Parish Mass is streamed online, including the first-Sunday Signed Parish Mass for the Deaf Community."
+        ],
+        "links": [
+          {
+            "label": "Direct Vimeo livestream",
+            "url": "https://vimeo.com/event/282657"
+          },
+          {
+            "label": "Visit / Contact",
+            "url": "visit-contact.html#contact-details"
+          }
+        ]
+      },
+      {
+        "id": "confession-sacraments",
+        "meta": "Sacramental life",
+        "title": "Confession / Sacraments",
+        "paragraphs": [
+          "Baptisms, marriages, funerals, and anointing are arranged through the parish office."
+        ],
+        "items": [
+          "Sacrament of Reconciliation: Saturday after Mass",
+          "Additional Saturday confession time: 4:00pm-4:30pm",
+          "Sacramental enquiries through the parish office"
+        ]
+      },
+      {
+        "id": "special-liturgies",
+        "meta": "Special worship",
+        "title": "Special Liturgies",
+        "paragraphs": [
+          "The parish publishes seasonal liturgies through its weekly highlights, diary, and newsletters."
+        ],
+        "items": [
+          "Sunday Stations of the Cross in Lent",
+          "Friday Lenten Area House Mass",
+          "Monthly Mass for people with special needs with the Clifton Catholic Fellowship: first Sunday at 3:00pm"
+        ],
+        "links": [
+          {
+            "label": "Weekly highlights on this site",
+            "url": "news-reflections.html#weekly-highlights"
+          }
+        ]
+      },
+      {
+        "id": "deaf-community-mass",
+        "meta": "Accessible worship",
+        "title": "Deaf Community Mass",
+        "paragraphs": [
+          "The homepage currently advertises a Signed Parish Mass for the Deaf Community on the first Sunday of the month at 10:00am.",
+          "A separate monthly Deaf Community Mass at 3:00pm is noted on the parish site as suspended due to lack of support."
+        ],
+        "links": [
+          {
+            "label": "Deaf Community Mass details",
+            "url": "mass-services.html#deaf-community-mass"
+          },
+          {
+            "label": "Signed Mass publicity PDF",
+            "url": "uploads/documents/Signed-mass.pdf"
+          }
+        ]
+      },
+      {
+        "id": "lgbtq-mass",
+        "meta": "Community worship",
+        "title": "LGBTQ+ Mass",
+        "paragraphs": [
+          "The parish site lists a Mass with the LGBTQ+ community on the third Sunday of the month at 3:00pm."
+        ],
+        "links": [
+          {
+            "label": "LGBTQ+ Mass details",
+            "url": "mass-services.html#lgbtq-mass"
+          },
+          {
+            "label": "Poster PDF",
+            "url": "uploads/documents/LGBT-Mass-Poster-third.pdf"
+          },
+          {
+            "label": "Liturgy PDF",
+            "url": "uploads/documents/LGBT-Mass-Liturgy-February-2022.pdf"
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "visitHighlightTitle": "Lawford's Gate, Easton, Bristol",
+    "visitHighlightMeta": "Church: BS5 0RE - Parking: Pennywell Road, BS5 0TJ",
+    "visitHighlightBody": "Parish Office enquiries are generally welcomed Monday to Friday, 10:00am to 1:00pm.",
+    "churchName": "St Nicholas of Tolentino RC Church",
+    "churchAddressLines": [
+      "Lawford's Gate",
+      "Easton, Bristol",
+      "BS5 0RE"
+    ],
+    "presbyteryAddressLines": [
+      "St Nicholas Presbytery",
+      "Lawford's Gate",
+      "Bristol, BS5 0RE"
+    ],
+    "officeAddressLines": [
+      "Assisi Centre",
+      "Lawford's Gate",
+      "Bristol, BS5 0RE"
+    ],
+    "parking": "Pennywell Road, BS5 0TJ",
+    "officePhone": "0117 909 0419",
+    "officeEmail": "bristol.stnicholasoftolentino@cliftondiocese.com",
+    "officeHoursSummary": "Office enquiries are generally welcomed Monday to Friday, 10:00am to 1:00pm.",
+    "officeHoursDetailed": [
+      "Monday: 10:00am-12:00 noon",
+      "Tuesday: 10:00am-12:00 noon and 2:00pm-4:00pm",
+      "Wednesday: 10:00am-12:00 noon",
+      "Thursday: 10:00am-12:00 noon",
+      "Friday: 10:00am-12:00 noon and 5:00pm-7:00pm"
+    ],
+    "priestName": "Rev Richard McKay",
+    "priestPhone": "0117 909 8810",
+    "priestEmergency": "07779 677370",
+    "priestEmail": "richard.mckay@cliftondiocese.com",
+    "priestAvailability": "Fr Richard is normally available Thursday to Sunday rather than Monday to Wednesday.",
+    "contactPageUrl": "visit-contact.html#contact-details",
+    "donationLinks": [
+      {
+        "label": "Donate to St Nicholas Parish via MyDona",
+        "url": "https://donate.mydona.com/st-nicholas-of-tolentino"
+      },
+      {
+        "label": "St Nicholas Bread details",
+        "url": "parish-life.html#foodbank"
+      },
+      {
+        "label": "Borderlands",
+        "url": "https://www.borderlands.uk.com"
+      }
+    ],
+    "foodbankManager": "Michael Conway",
+    "foodbankPhone": "07482 425539",
+    "borderlandsEmail": "enquiries.borderlands@gmail.com"
+  },
+  "safeguarding": {
+    "parishRepresentatives": [
+      {
+        "name": "Mary Hopper",
+        "role": "Parish Safeguarding Representative",
+        "email": "psr.stnicholasoftolentino@cliftondiocese.com"
+      },
+      {
+        "name": "Paul Bradshaw-Price",
+        "role": "Parish Safeguarding Representative",
+        "email": "psr.stnicholasoftolentino@cliftondiocese.com"
+      }
+    ],
+    "diocesanOfficeAddress": "Alexander House, 160 Pennywell Road, Bristol, BS5 0TX",
+    "diocesanPhone": "0117 954 0993",
+    "diocesanEmail": "safeguarding@cliftondiocese.com",
+    "coordinatorName": "Janice Pearson",
+    "coordinatorPhone": "07887 990 385",
+    "coordinatorEmail": "Janice.pearson@cliftondiocese.com",
+    "diocesanUrl": "http://www.cliftondiocese.com/depatments/safeguarding",
+    "parishPageUrl": "safeguarding.html#local-safeguarding",
+    "bishopStatementUrl": "uploads/documents/Bishops-Statement-on-Safeguarding-responding-to-IICSA-Report.pdf",
+    "domesticAbuseBookletUrl": "uploads/documents/NBCW-Domestic-Abuse-A4-Booklet.pdf"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "brand": {
+    "name": "St Nicholas of Tolentino",
+    "meta": "Roman Catholic Parish in Easton, Bristol"
+  },
+  "footer": {
+    "description": "Roman Catholic parish life in Easton, Bristol: Mass times, livestream, newsletters, safeguarding information, and community outreach.",
+    "address": "Lawford's Gate, Easton, Bristol, BS5 0RE",
+    "officeLabel": "Parish Office",
+    "phone": "0117 909 0419",
+    "email": "bristol.stnicholasoftolentino@cliftondiocese.com",
+    "legalNote": "Legal and policy text on this website must be reviewed and approved before launch.",
+    "supportLabel": "Website by Waylight Atlantic",
+    "supportUrl": "https://www.waylight-atlantic.co.uk",
+    "supportMessage": "If you need help updating the website, read the guide first. If you are still unsure, contact Waylight Atlantic."
+  }
+}

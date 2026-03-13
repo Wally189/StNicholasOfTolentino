@@ -1,0 +1,53 @@
+{
+  "items": [
+    {
+      "title": "The Synod Final Document - Official English Summary",
+      "date": "2024-11-03",
+      "description": "Linked from the parish newsletters area as a synod resource.",
+      "file": "",
+      "externalUrl": "about-the-parish.html#synod-information"
+    },
+    {
+      "title": "St Nicholas of Tolentino Synod Report v6",
+      "date": "2022-02-01",
+      "description": "Parish synod report PDF.",
+      "file": "uploads/documents/St-Nicholas-of-Tolentino-Synod-Report_v6.pdf",
+      "externalUrl": ""
+    },
+    {
+      "title": "Summary of responses to proposals to be presented to Bishop",
+      "date": "2023-05-01",
+      "description": "Parish consultation summary PDF.",
+      "file": "uploads/documents/Summary-of-responses-to-proposals-to-be-presented-to-Bishop.pdf",
+      "externalUrl": ""
+    },
+    {
+      "title": "Community Elders",
+      "date": "2024-01-01",
+      "description": "Parish leadership paper.",
+      "file": "uploads/documents/Community-Elders.pdf",
+      "externalUrl": ""
+    },
+    {
+      "title": "Summary Doc - Servant Leaders",
+      "date": "2024-02-01",
+      "description": "Parish leadership summary document.",
+      "file": "uploads/documents/Summary-Doc-Servant-Leaders-1.pdf",
+      "externalUrl": ""
+    },
+    {
+      "title": "Way of the Resurrection illustrated",
+      "date": "2020-05-01",
+      "description": "Prayer resource PDF.",
+      "file": "uploads/documents/Way-of-the-Resurrection-illustrated.pdf",
+      "externalUrl": ""
+    },
+    {
+      "title": "Stations of Creation",
+      "date": "2020-05-01",
+      "description": "Prayer resource PDF.",
+      "file": "uploads/documents/Stations-of-Creation-1.pdf",
+      "externalUrl": ""
+    }
+  ]
+}

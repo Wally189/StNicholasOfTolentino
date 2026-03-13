@@ -1,0 +1,102 @@
+{
+  "hero": {
+    "eyebrow": "News & Reflections",
+    "title": "Notices, prayer resources, and parish voice in one clear stream",
+    "lede": "The parish publishes a steady rhythm of bulletins, weekly highlights, prayer resources, Pope Francis reflections, and downloadable documents.",
+    "image": "/uploads/hero-interior.jpg"
+  },
+  "intro": {
+    "eyebrow": "Current News",
+    "title": "Regular parish sections already in use",
+    "body": "The live parish site groups its communication around newsletters, weekly highlights, the diary, bidding prayers, spiritual reflection, penitential resources, and Pope Francis' words.",
+    "asideMeta": "Latest bulletin"
+  },
+  "cards": [
+    {
+      "id": "weekly-highlights",
+      "meta": "News section",
+      "title": "Weekly Highlights",
+      "paragraphs": [
+        "The parish highlights page carries current notices for Lent and Holy Week, volunteering, bishop visits, and practical parish updates."
+      ],
+      "links": [
+        {
+          "label": "Open the newsletter archive",
+          "url": "newsletter-archive.html"
+        },
+        {
+          "label": "Parish activities",
+          "url": "parish-life.html#parish-activities"
+        }
+      ]
+    },
+    {
+      "id": "parish-newsletters",
+      "meta": "Newsletter archive",
+      "title": "Parish Newsletters",
+      "paragraphs": [
+        "Upload a new PDF newsletter below in the CMS and it will appear automatically in this list."
+      ],
+      "links": [
+        {
+          "label": "Open the full newsletter archive",
+          "url": "newsletter-archive.html"
+        }
+      ]
+    },
+    {
+      "id": "bidding-prayers",
+      "meta": "Prayer resources",
+      "title": "Bidding Prayers",
+      "paragraphs": [
+        "Prayer material, seasonal liturgy notes, and related downloads can be gathered locally with the parish documents."
+      ],
+      "links": [
+        {
+          "label": "Parish documents and prayer resources",
+          "url": "newsletter-archive.html#parish-documents"
+        },
+        {
+          "label": "Special liturgies",
+          "url": "mass-services.html#special-liturgies"
+        }
+      ]
+    },
+    {
+      "id": "reflections",
+      "meta": "Reflection archive",
+      "title": "Reflections",
+      "paragraphs": [
+        "Reflections, weekly notices, and parish documents can be browsed together without leaving the parish site."
+      ],
+      "links": [
+        {
+          "label": "Weekly Highlights",
+          "url": "news-reflections.html#weekly-highlights"
+        },
+        {
+          "label": "Newsletter archive",
+          "url": "newsletter-archive.html"
+        }
+      ]
+    },
+    {
+      "id": "vatican-news",
+      "meta": "Church-wide links",
+      "title": "Vatican News / Pope",
+      "paragraphs": [
+        "The parish currently surfaces Vatican-related reflection through the Pope Francis' Words category and synod material."
+      ],
+      "links": [
+        {
+          "label": "Vatican News",
+          "url": "https://www.vaticannews.va/en.html"
+        },
+        {
+          "label": "Diocese of Clifton",
+          "url": "https://www.cliftondiocese.com"
+        }
+      ]
+    }
+  ]
+}

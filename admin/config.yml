@@ -1,0 +1,968 @@
+# Decap CMS writes directly to the JSON files in /content and uploads files to /uploads.
+# local_backend: true lets a support developer use the local proxy server during handover.
+
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+media_folder: "uploads"
+public_folder: "/uploads"
+logo_url: "/assets/images/brand-mark.svg"
+publish_mode: simple
+editor:
+  preview: false
+
+collections:
+  - name: "newsletters"
+    label: "Weekly Newsletter PDF"
+    files:
+      - label: "Weekly Newsletter PDF"
+        name: "newsletter_list"
+        file: "content/newsletters/items.json"
+        format: "json"
+        fields:
+          - label: "Newsletter list"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.date}} - {{fields.title}}"
+            hint: "Most weeks you only need to add one new item here: title, date, PDF, then Publish."
+            fields:
+              - label: "Newsletter title"
+                name: "title"
+                widget: "string"
+                hint: "Example: Bulletin 15:03:2026"
+              - label: "Newsletter date"
+                name: "date"
+                widget: "datetime"
+                time_format: false
+                format: "YYYY-MM-DD"
+                hint: "Use the date of the newsletter. The newest date will appear first on the website."
+              - label: "Upload newsletter PDF here"
+                name: "file"
+                widget: "file"
+                required: false
+                hint: "This is the main box to use. Choose the PDF from your computer."
+              - label: "Short note under the link"
+                name: "description"
+                widget: "text"
+                required: false
+                hint: "Optional. You can leave this blank."
+              - label: "Web link instead of a PDF upload"
+                name: "externalUrl"
+                widget: "string"
+                required: false
+                hint: "Leave this blank unless support told you to use a web link instead of uploading a PDF."
+
+  - name: "parish_details"
+    label: "Mass Times, Contact and Safeguarding"
+    files:
+      - label: "Mass Times, Contact and Safeguarding"
+        name: "parish_details"
+        file: "content/settings/parish.json"
+        format: "json"
+        fields:
+          - label: "Next Mass box on homepage"
+            name: "nextMass"
+            widget: "object"
+            hint: "This is the highlighted Mass box near the top of the homepage."
+            fields:
+              - label: "Small heading above the box"
+                name: "eyebrow"
+                widget: "string"
+                hint: "Usually leave this as 'Next Mass'."
+              - label: "Main title"
+                name: "title"
+                widget: "string"
+                hint: "Example: Sunday Parish Eucharist"
+              - label: "Day and time line"
+                name: "meta"
+                widget: "string"
+                hint: "Example: Sunday, 10:00am - Church nave and livestream"
+              - label: "Short summary"
+                name: "body"
+                widget: "text"
+                hint: "Use one short paragraph."
+              - label: "Extra note"
+                name: "note"
+                widget: "text"
+                required: false
+                hint: "Optional. Use this only for temporary or special notices."
+
+          - label: "Mass times, confession and livestream"
+            name: "massTimes"
+            widget: "object"
+            fields:
+              - label: "Homepage Mass times boxes"
+                name: "quickCards"
+                widget: "list"
+                summary: "{{fields.title}}"
+                hint: "These are the small Mass information boxes on the homepage."
+                fields:
+                  - label: "Box title"
+                    name: "title"
+                    widget: "string"
+                    hint: "Example: Sunday, Weekdays, Confession, Livestream"
+                  - label: "Lines in this box"
+                    name: "items"
+                    widget: "list"
+                    field:
+                      label: "Line"
+                      name: "item"
+                      widget: "string"
+                  - label: "Optional links"
+                    name: "links"
+                    widget: "list"
+                    required: false
+                    hint: "Use this if the box needs a livestream link or another page link."
+                    fields:
+                      - label: "Link text"
+                        name: "label"
+                        widget: "string"
+                      - label: "Link address"
+                        name: "url"
+                        widget: "string"
+
+              - label: "Mass and Services page sections"
+                name: "serviceCards"
+                widget: "list"
+                summary: "{{fields.title}}"
+                hint: "Open the section called 'Livestream' if you need to change the livestream link."
+                fields:
+                  - label: "Internal name - leave this as it is"
+                    name: "id"
+                    widget: "string"
+                    hint: "Do not change this unless support asks you to."
+                  - label: "Small heading above title"
+                    name: "meta"
+                    widget: "string"
+                    required: false
+                  - label: "Section title"
+                    name: "title"
+                    widget: "string"
+                  - label: "Paragraphs"
+                    name: "paragraphs"
+                    widget: "list"
+                    required: false
+                    field:
+                      label: "Paragraph"
+                      name: "paragraph"
+                      widget: "text"
+                  - label: "Bullet points"
+                    name: "items"
+                    widget: "list"
+                    required: false
+                    field:
+                      label: "Bullet point"
+                      name: "item"
+                      widget: "string"
+                  - label: "Links"
+                    name: "links"
+                    widget: "list"
+                    required: false
+                    fields:
+                      - label: "Link text"
+                        name: "label"
+                        widget: "string"
+                      - label: "Link address"
+                        name: "url"
+                        widget: "string"
+
+          - label: "Contact details and office hours"
+            name: "contact"
+            widget: "object"
+            hint: "These details are reused across the site, including the footer."
+            fields:
+              - label: "Short title on homepage visit box"
+                name: "visitHighlightTitle"
+                widget: "string"
+              - label: "Short line under that title"
+                name: "visitHighlightMeta"
+                widget: "string"
+              - label: "Short summary in that box"
+                name: "visitHighlightBody"
+                widget: "text"
+              - label: "Church name"
+                name: "churchName"
+                widget: "string"
+              - label: "Church address"
+                name: "churchAddressLines"
+                widget: "list"
+                hint: "Add one line for each line of the address."
+                field:
+                  label: "Address line"
+                  name: "line"
+                  widget: "string"
+              - label: "Presbytery address"
+                name: "presbyteryAddressLines"
+                widget: "list"
+                field:
+                  label: "Address line"
+                  name: "line"
+                  widget: "string"
+              - label: "Parish office address"
+                name: "officeAddressLines"
+                widget: "list"
+                field:
+                  label: "Address line"
+                  name: "line"
+                  widget: "string"
+              - label: "Parking details"
+                name: "parking"
+                widget: "string"
+              - label: "Parish office phone"
+                name: "officePhone"
+                widget: "string"
+                hint: "Type the number exactly as you want people to see it."
+              - label: "Parish office email"
+                name: "officeEmail"
+                widget: "string"
+              - label: "Short office hours line"
+                name: "officeHoursSummary"
+                widget: "text"
+                hint: "This short version appears in the footer."
+              - label: "Full office hours"
+                name: "officeHoursDetailed"
+                widget: "list"
+                hint: "Add one line for each day or opening period."
+                field:
+                  label: "Office hours line"
+                  name: "line"
+                  widget: "string"
+              - label: "Parish priest name"
+                name: "priestName"
+                widget: "string"
+              - label: "Parish priest phone"
+                name: "priestPhone"
+                widget: "string"
+              - label: "Emergency mobile"
+                name: "priestEmergency"
+                widget: "string"
+              - label: "Parish priest email"
+                name: "priestEmail"
+                widget: "string"
+              - label: "Availability note"
+                name: "priestAvailability"
+                widget: "text"
+              - label: "Existing parish contact page link"
+                name: "contactPageUrl"
+                widget: "string"
+                required: false
+                hint: "Optional. Leave this as it is unless the link has changed."
+              - label: "Donation and support links"
+                name: "donationLinks"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - label: "Link text"
+                    name: "label"
+                    widget: "string"
+                  - label: "Link address"
+                    name: "url"
+                    widget: "string"
+              - label: "Foodbank manager"
+                name: "foodbankManager"
+                widget: "string"
+                required: false
+              - label: "Foodbank phone"
+                name: "foodbankPhone"
+                widget: "string"
+                required: false
+              - label: "Borderlands email"
+                name: "borderlandsEmail"
+                widget: "string"
+                required: false
+
+          - label: "Safeguarding contacts"
+            name: "safeguarding"
+            widget: "object"
+            hint: "Keep this section formal and accurate."
+            fields:
+              - label: "Parish safeguarding representatives"
+                name: "parishRepresentatives"
+                widget: "list"
+                summary: "{{fields.name}}"
+                fields:
+                  - label: "Name"
+                    name: "name"
+                    widget: "string"
+                  - label: "Role"
+                    name: "role"
+                    widget: "string"
+                  - label: "Email"
+                    name: "email"
+                    widget: "string"
+              - label: "Diocesan office address"
+                name: "diocesanOfficeAddress"
+                widget: "string"
+              - label: "Diocesan phone"
+                name: "diocesanPhone"
+                widget: "string"
+              - label: "Diocesan email"
+                name: "diocesanEmail"
+                widget: "string"
+              - label: "Safeguarding coordinator name"
+                name: "coordinatorName"
+                widget: "string"
+              - label: "Safeguarding coordinator phone"
+                name: "coordinatorPhone"
+                widget: "string"
+              - label: "Safeguarding coordinator email"
+                name: "coordinatorEmail"
+                widget: "string"
+              - label: "Diocesan safeguarding page link"
+                name: "diocesanUrl"
+                widget: "string"
+              - label: "Existing parish safeguarding page link"
+                name: "parishPageUrl"
+                widget: "string"
+                required: false
+              - label: "Bishop statement PDF link"
+                name: "bishopStatementUrl"
+                widget: "string"
+                required: false
+              - label: "Domestic abuse booklet PDF link"
+                name: "domesticAbuseBookletUrl"
+                widget: "string"
+                required: false
+
+  - name: "homepage"
+    label: "Homepage Welcome and Images"
+    files:
+      - label: "Homepage Welcome and Images"
+        name: "homepage"
+        file: "content/pages/home.json"
+        format: "json"
+        fields:
+          - label: "Top welcome section"
+            name: "hero"
+            widget: "object"
+            hint: "This is the large area at the top of the homepage."
+            fields:
+              - label: "Small heading above title"
+                name: "eyebrow"
+                widget: "string"
+              - label: "Main heading"
+                name: "title"
+                widget: "string"
+              - label: "Welcome text"
+                name: "welcome"
+                widget: "text"
+                hint: "Keep this calm, short, and welcoming."
+              - label: "Hero slides"
+                name: "slides"
+                widget: "list"
+                summary: "{{fields.alt}}"
+                hint: "These are the large background images at the top of the homepage."
+                fields:
+                  - label: "Photo"
+                    name: "image"
+                    widget: "image"
+                  - label: "Short description of the photo"
+                    name: "alt"
+                    widget: "string"
+                    hint: "This helps accessibility. Describe what is in the image."
+              - label: "Top buttons"
+                name: "buttons"
+                widget: "list"
+                summary: "{{fields.label}}"
+                hint: "Usually leave these as they are unless you need to change the wording or link."
+                fields:
+                  - label: "Button text"
+                    name: "label"
+                    widget: "string"
+                  - label: "Button link"
+                    name: "href"
+                    widget: "string"
+                  - label: "Button style"
+                    name: "style"
+                    widget: "select"
+                    options:
+                      - { label: "Blue", value: "button-primary" }
+                      - { label: "Gold", value: "button-secondary" }
+                      - { label: "Outline", value: "button-ghost" }
+
+          - label: "Short introduction above Mass times"
+            name: "quickMassIntro"
+            widget: "object"
+            fields:
+              - label: "Small heading above title"
+                name: "eyebrow"
+                widget: "string"
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Short summary"
+                name: "copy"
+                widget: "text"
+
+          - label: "Mission section"
+            name: "mission"
+            widget: "object"
+            fields:
+              - label: "Small heading above title"
+                name: "eyebrow"
+                widget: "string"
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field:
+                  label: "Paragraph"
+                  name: "paragraph"
+                  widget: "text"
+              - label: "Bullet points"
+                name: "bullets"
+                widget: "list"
+                field:
+                  label: "Bullet point"
+                  name: "bullet"
+                  widget: "string"
+              - label: "Side image"
+                name: "image"
+                widget: "image"
+              - label: "Image description"
+                name: "imageAlt"
+                widget: "string"
+              - label: "Image caption"
+                name: "caption"
+                widget: "text"
+
+          - label: "Parish life section on homepage"
+            name: "parishLife"
+            widget: "object"
+            fields:
+              - label: "Small heading above title"
+                name: "eyebrow"
+                widget: "string"
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Short summary"
+                name: "copy"
+                widget: "text"
+              - label: "Cards in this section"
+                name: "cards"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - label: "Card type"
+                    name: "type"
+                    widget: "select"
+                    options:
+                      - { label: "Large image card", value: "image" }
+                      - { label: "Text card", value: "text" }
+                      - { label: "Text card with link", value: "link" }
+                  - label: "Small heading above title"
+                    name: "meta"
+                    widget: "string"
+                  - label: "Title"
+                    name: "title"
+                    widget: "string"
+                  - label: "Body text"
+                    name: "body"
+                    widget: "text"
+                  - label: "Image or logo"
+                    name: "image"
+                    widget: "image"
+                    required: false
+                  - label: "Image description"
+                    name: "imageAlt"
+                    widget: "string"
+                    required: false
+                  - label: "Link text"
+                    name: "linkLabel"
+                    widget: "string"
+                    required: false
+                  - label: "Link address"
+                    name: "linkUrl"
+                    widget: "string"
+                    required: false
+
+          - label: "Visit / Contact section near footer"
+            name: "contactHighlight"
+            widget: "object"
+            fields:
+              - label: "Small heading above title"
+                name: "eyebrow"
+                widget: "string"
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Short summary"
+                name: "copy"
+                widget: "text"
+
+  - name: "news_items"
+    label: "Homepage News and Notices"
+    files:
+      - label: "Homepage News and Notices"
+        name: "news_items"
+        file: "content/news/items.json"
+        format: "json"
+        fields:
+          - label: "News and notice items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}}"
+            hint: "These items appear on the homepage and the News & Reflections page."
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Small label above the title"
+                name: "meta"
+                widget: "string"
+                required: false
+              - label: "Short summary"
+                name: "summary"
+                widget: "text"
+              - label: "Button text"
+                name: "linkLabel"
+                widget: "string"
+              - label: "Link to open"
+                name: "linkUrl"
+                widget: "string"
+              - label: "Show this on the homepage"
+                name: "featured"
+                widget: "boolean"
+                default: false
+                hint: "Turn this on for the items you want to show more prominently."
+              - label: "Optional image"
+                name: "image"
+                widget: "image"
+                required: false
+
+  - name: "documents"
+    label: "Parish Documents and PDFs"
+    files:
+      - label: "Parish Documents and PDFs"
+        name: "document_list"
+        file: "content/documents/items.json"
+        format: "json"
+        fields:
+          - label: "Document list"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.date}} - {{fields.title}}"
+            hint: "Use this for synod papers, parish documents, and other downloadable files."
+            fields:
+              - label: "Document title"
+                name: "title"
+                widget: "string"
+              - label: "Document date"
+                name: "date"
+                widget: "datetime"
+                time_format: false
+                format: "YYYY-MM-DD"
+              - label: "Upload file here"
+                name: "file"
+                widget: "file"
+                required: false
+              - label: "Short note under the link"
+                name: "description"
+                widget: "text"
+                required: false
+              - label: "Web link instead of a file upload"
+                name: "externalUrl"
+                widget: "string"
+                required: false
+                hint: "Leave this blank unless the file already lives on another website."
+
+  - name: "site_settings"
+    label: "Footer and Parish Name"
+    files:
+      - label: "Footer and Parish Name"
+        name: "site_settings"
+        file: "content/settings/site.json"
+        format: "json"
+        fields:
+          - label: "Parish name"
+            name: "brand"
+            widget: "object"
+            fields:
+              - label: "Parish name"
+                name: "name"
+                widget: "string"
+              - label: "Short line under parish name"
+                name: "meta"
+                widget: "string"
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            hint: "These details appear in the footer on every page."
+            fields:
+              - label: "Short footer summary"
+                name: "description"
+                widget: "text"
+              - label: "Footer address"
+                name: "address"
+                widget: "string"
+              - label: "Office label"
+                name: "officeLabel"
+                widget: "string"
+              - label: "Footer phone number"
+                name: "phone"
+                widget: "string"
+              - label: "Footer email address"
+                name: "email"
+                widget: "string"
+              - label: "Legal review note"
+                name: "legalNote"
+                widget: "text"
+                hint: "This is kept for support use. You can usually leave it as it is."
+              - label: "Waylight Atlantic credit text"
+                name: "supportLabel"
+                widget: "string"
+                hint: "Usually leave this as it is."
+              - label: "Waylight Atlantic website link"
+                name: "supportUrl"
+                widget: "string"
+                hint: "Usually leave this as it is."
+              - label: "Support message"
+                name: "supportMessage"
+                widget: "text"
+                hint: "Usually leave this as it is."
+
+  - name: "page_sections"
+    label: "Other Page Text"
+    files:
+      - label: "Mass & Services Page"
+        name: "mass_page"
+        file: "content/pages/mass-services.json"
+        format: "json"
+        fields:
+          - label: "Top page image and title"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short introduction", name: "lede", widget: "text" }
+              - { label: "Page image", name: "image", widget: "image" }
+          - label: "Intro section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro paragraph", name: "body", widget: "text" }
+              - { label: "Small heading in the side box", name: "asideMeta", widget: "string", required: false }
+              - { label: "Title in the side box", name: "asideTitle", widget: "string", required: false }
+              - label: "Lines in the side box"
+                name: "asideItems"
+                widget: "list"
+                required: false
+                field: { label: "Line", name: "line", widget: "string" }
+
+      - label: "Parish Life Page"
+        name: "parish_life_page"
+        file: "content/pages/parish-life.json"
+        format: "json"
+        fields:
+          - label: "Top page image and title"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short introduction", name: "lede", widget: "text" }
+              - { label: "Page image", name: "image", widget: "image" }
+          - label: "Intro section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro paragraph", name: "body", widget: "text" }
+              - { label: "Small heading in the side box", name: "asideMeta", widget: "string", required: false }
+              - { label: "Text in the side box", name: "asideBody", widget: "text", required: false }
+          - label: "Page sections"
+            name: "cards"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Internal name - leave this as it is", name: "id", widget: "string" }
+              - { label: "Small heading above title", name: "meta", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                required: false
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - label: "Bullet points"
+                name: "items"
+                widget: "list"
+                required: false
+                field: { label: "Bullet point", name: "line", widget: "string" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Link text", name: "label", widget: "string" }
+                  - { label: "Link address", name: "url", widget: "string" }
+
+      - label: "Gallery Page and Albums"
+        name: "gallery_page"
+        file: "content/pages/gallery.json"
+        format: "json"
+        fields:
+          - label: "Top page image and title"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short introduction", name: "lede", widget: "text" }
+              - { label: "Page image", name: "image", widget: "image" }
+          - label: "Intro section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro paragraph", name: "body", widget: "text" }
+              - { label: "Small heading in the side box", name: "asideMeta", widget: "string", required: false }
+              - { label: "Side box title", name: "asideTitle", widget: "string", required: false }
+              - label: "Lines in the side box"
+                name: "asideItems"
+                widget: "list"
+                required: false
+                hint: "These are the short lines in the small side box."
+                field: { label: "Line", name: "line", widget: "string" }
+          - label: "Gallery albums"
+            name: "albums"
+            widget: "list"
+            summary: "{{fields.title}}"
+            hint: "Add a new album by clicking Add item. Each album can hold many photographs."
+            fields:
+              - { label: "Internal name - use short words only", name: "id", widget: "string", required: false, hint: "Example: baptisms or first-eucharist" }
+              - { label: "Small heading above album title", name: "meta", widget: "string", required: false }
+              - { label: "Album title", name: "title", widget: "string" }
+              - { label: "Short album text", name: "body", widget: "text", required: false, hint: "Use one short paragraph." }
+              - { label: "Small note under the album text", name: "note", widget: "text", required: false, hint: "Optional." }
+              - label: "Photographs in this album"
+                name: "images"
+                widget: "list"
+                summary: "{{fields.imageAlt}}"
+                hint: "Upload photographs here. The album will rotate through them automatically on the website."
+                fields:
+                  - { label: "Photo", name: "image", widget: "image" }
+                  - { label: "Short description of the photo", name: "imageAlt", widget: "string", required: false, hint: "Example: Children gathered after First Holy Communion." }
+                  - { label: "Caption under the photo", name: "caption", widget: "string", required: false, hint: "Optional. Leave blank if not needed." }
+          - label: "Lower page cards"
+            name: "cards"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Internal name - leave this as it is", name: "id", widget: "string" }
+              - { label: "Small heading above title", name: "meta", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                required: false
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Link text", name: "label", widget: "string" }
+                  - { label: "Link address", name: "url", widget: "string" }
+
+      - label: "News & Reflections Page"
+        name: "news_page"
+        file: "content/pages/news-reflections.json"
+        format: "json"
+        fields:
+          - label: "Top page image and title"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short introduction", name: "lede", widget: "text" }
+              - { label: "Page image", name: "image", widget: "image" }
+          - label: "Intro section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro paragraph", name: "body", widget: "text" }
+              - { label: "Small heading in the side box", name: "asideMeta", widget: "string", required: false }
+          - label: "Page sections"
+            name: "cards"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Internal name - leave this as it is", name: "id", widget: "string" }
+              - { label: "Small heading above title", name: "meta", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                required: false
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Link text", name: "label", widget: "string" }
+                  - { label: "Link address", name: "url", widget: "string" }
+
+      - label: "About the Parish Page"
+        name: "about_page"
+        file: "content/pages/about-the-parish.json"
+        format: "json"
+        fields:
+          - label: "Top page image and title"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short introduction", name: "lede", widget: "text" }
+              - { label: "Page image", name: "image", widget: "image" }
+          - label: "Intro section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro paragraph", name: "body", widget: "text" }
+              - { label: "Side image", name: "image", widget: "image" }
+              - { label: "Image description", name: "imageAlt", widget: "string" }
+              - { label: "Image caption", name: "caption", widget: "text" }
+          - label: "Page sections"
+            name: "cards"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Internal name - leave this as it is", name: "id", widget: "string" }
+              - { label: "Small heading above title", name: "meta", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                required: false
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Link text", name: "label", widget: "string" }
+                  - { label: "Link address", name: "url", widget: "string" }
+
+      - label: "Visit / Contact Page"
+        name: "visit_page"
+        file: "content/pages/visit-contact.json"
+        format: "json"
+        fields:
+          - label: "Top page image and title"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short introduction", name: "lede", widget: "text" }
+              - { label: "Page image", name: "image", widget: "image" }
+          - label: "Intro section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro paragraph", name: "body", widget: "text" }
+          - label: "Page sections"
+            name: "cards"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Internal name - leave this as it is", name: "id", widget: "string" }
+              - { label: "Small heading above title", name: "meta", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                required: false
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+
+      - label: "Safeguarding Page"
+        name: "safeguarding_page"
+        file: "content/pages/safeguarding.json"
+        format: "json"
+        fields:
+          - label: "Top page image and title"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short introduction", name: "lede", widget: "text" }
+              - { label: "Page image", name: "image", widget: "image" }
+          - label: "Intro section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro paragraph", name: "body", widget: "text" }
+
+  - name: "legal_pages"
+    label: "Legal Pages"
+    files:
+      - label: "Legal Pages"
+        name: "legal_pages"
+        file: "content/pages/legal.json"
+        format: "json"
+        fields:
+          - label: "Privacy Policy"
+            name: "privacy"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short introduction", name: "lede", widget: "text" }
+              - { label: "Review notice", name: "reviewNotice", widget: "text" }
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - { label: "Section title", name: "title", widget: "string" }
+                  - { label: "Section text", name: "body", widget: "text" }
+          - label: "Cookie Policy"
+            name: "cookies"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short introduction", name: "lede", widget: "text" }
+              - { label: "Review notice", name: "reviewNotice", widget: "text" }
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - { label: "Section title", name: "title", widget: "string" }
+                  - { label: "Section text", name: "body", widget: "text" }
+          - label: "Terms of Use"
+            name: "terms"
+            widget: "object"
+            fields:
+              - { label: "Small heading above title", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short introduction", name: "lede", widget: "text" }
+              - { label: "Review notice", name: "reviewNotice", widget: "text" }
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - { label: "Section title", name: "title", widget: "string" }
+                  - { label: "Section text", name: "body", widget: "text" }

@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "eyebrow": "Mass & Services",
+    "title": "Liturgical life with clarity, beauty, and pastoral welcome",
+    "lede": "Sunday Mass, weekday worship, reconciliation, livestream access, and community-specific liturgies as published by the parish.",
+    "image": "/uploads/hero-mass.jpg"
+  },
+  "intro": {
+    "eyebrow": "Current Schedule",
+    "title": "Published parish worship pattern",
+    "body": "The live parish site currently lists Sunday Parish Mass at 10:00am with livestream, weekday Adoration and Mass on Thursday and Friday, and regular confession on Saturday. Additional seasonal liturgies and special events appear in the parish highlights and diary.",
+    "asideMeta": "This week's public notice",
+    "asideTitle": "Lent at St Nick's",
+    "asideItems": [
+      "Sunday Stations of the Cross at about 12:30pm",
+      "Friday Lenten Area House Mass at 7:00pm",
+      "Weekly updates published through Highlights of the Week and the bulletin"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "privacy": {
+    "eyebrow": "Privacy Policy",
+    "title": "Privacy Policy",
+    "lede": "Starter privacy wording for the parish website. This text must be reviewed and approved before launch.",
+    "reviewNotice": "Review required before launch: replace this starter text with parish-specific and diocesan-approved privacy wording.",
+    "sections": [
+      {
+        "title": "Who we are",
+        "body": "This website is for St Nicholas of Tolentino RC Church in Bristol. Insert the legal parish entity details and the correct data-controller wording before launch."
+      },
+      {
+        "title": "What information this website may collect",
+        "body": "Typical parish website data may include contact form messages, newsletter uploads, safeguarding enquiries, and website analytics. Confirm the exact tools and data flows in use before publishing this page."
+      },
+      {
+        "title": "How information is used",
+        "body": "Explain how enquiries are handled, who can access inboxes, how long emails or form data are kept, and whether any third-party providers are used."
+      },
+      {
+        "title": "Your rights",
+        "body": "Insert the correct contact route for privacy requests, corrections, complaints, and any diocesan oversight arrangements."
+      }
+    ]
+  },
+  "cookies": {
+    "eyebrow": "Cookie Policy",
+    "title": "Cookie Policy",
+    "lede": "Starter cookie wording for the parish website. This text must be reviewed before launch.",
+    "reviewNotice": "Review required before launch: confirm whether analytics, embedded video, CMS login, or third-party tools place cookies on the live website.",
+    "sections": [
+      {
+        "title": "Essential cookies",
+        "body": "Describe any cookies that are necessary for the website or the admin editing area to work. If none are used on the public site, say so clearly."
+      },
+      {
+        "title": "Analytics and embedded media",
+        "body": "If you use services such as embedded livestream video, Vimeo, or analytics, explain what cookies or trackers they may use and provide links to their policies."
+      },
+      {
+        "title": "Managing cookies",
+        "body": "Explain how visitors can change browser settings or decline optional cookies once the final cookie tools are agreed."
+      }
+    ]
+  },
+  "terms": {
+    "eyebrow": "Terms of Use",
+    "title": "Terms of Use",
+    "lede": "Starter terms wording for the parish website. This text must be reviewed before launch.",
+    "reviewNotice": "Review required before launch: insert parish-approved wording, especially around legal responsibility, external links, and safeguarding disclosures.",
+    "sections": [
+      {
+        "title": "Using this website",
+        "body": "Visitors may use this website for parish information, worship resources, and contact details. Insert any parish-specific conditions that should apply."
+      },
+      {
+        "title": "Accuracy of information",
+        "body": "Mass times, office hours, and event details can change. Explain that the parish tries to keep the site up to date, while final responsibility for worship times remains with the parish."
+      },
+      {
+        "title": "External links and downloads",
+        "body": "Explain that links to diocesan websites, livestream services, and uploaded documents are provided for convenience, and confirm the parish's preferred legal wording."
+      }
+    ]
+  }
+}

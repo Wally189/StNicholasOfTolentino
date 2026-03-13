@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "title": "Highlights of the Week and parish diary",
+      "meta": "Weekly Highlights",
+      "summary": "Weekly highlights, Lent and Holy Week notices, bishop visits, and practical parish updates are published on the highlights page and diary.",
+      "linkLabel": "View highlights",
+      "linkUrl": "news-reflections.html#weekly-highlights",
+      "featured": true,
+      "image": ""
+    },
+    {
+      "title": "Parish newsletters and bulletin archive",
+      "meta": "Parish Newsletters",
+      "summary": "The newsletter page carries bulletin downloads and related parish documents, including synod material and newsletters.",
+      "linkLabel": "Open the newsletter archive",
+      "linkUrl": "newsletter-archive.html",
+      "featured": false,
+      "image": ""
+    },
+    {
+      "title": "Bidding Prayers and Penitential Rites",
+      "meta": "Prayer Resources",
+      "summary": "The parish keeps a public archive of bidding prayers and penitential resources for communal and personal prayer.",
+      "linkLabel": "Open prayer resources",
+      "linkUrl": "newsletter-archive.html#parish-documents",
+      "featured": false,
+      "image": ""
+    },
+    {
+      "title": "Spiritual Reflection and Pope Francis' Words",
+      "meta": "Reflections",
+      "summary": "Regular spiritual reflection and Pope Francis commentary remain active parts of the parish website.",
+      "linkLabel": "Read reflections",
+      "linkUrl": "news-reflections.html#reflections",
+      "featured": false,
+      "image": ""
+    }
+  ]
+}

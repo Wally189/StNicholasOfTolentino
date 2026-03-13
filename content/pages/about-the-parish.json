@@ -1,0 +1,79 @@
+{
+  "hero": {
+    "eyebrow": "About the Parish",
+    "title": "History, ethos, leadership, and safeguarding gathered with dignity",
+    "lede": "The parish's public materials present St Nick's as a place of worship, charity, synod listening, and careful safeguarding rooted in Augustinian hospitality.",
+    "image": "/uploads/hero-interior.jpg"
+  },
+  "intro": {
+    "eyebrow": "Identity",
+    "title": "St Nicholas of Tolentino as the spiritual thread",
+    "body": "The parish's own mission language highlights prayer, humility, bread for the poor, and compassionate Augustinian witness. Those themes run through its worship, foodbank, refugee accompaniment, and pastoral welcome.",
+    "image": "/uploads/saint.jpg",
+    "imageAlt": "Painting of St Nicholas of Tolentino.",
+    "caption": "The parish patron remains the key spiritual reference for worship and service."
+  },
+  "cards": [
+    {
+      "id": "mission-ethos",
+      "meta": "Mission",
+      "title": "Mission and Ethos",
+      "paragraphs": [
+        "The parish mission joins Eucharistic worship with welcome, justice, and accompaniment of refugees, asylum seekers, homeless neighbours, and people under financial pressure.",
+        "Its published outreach includes Borderlands, the Wild Goose Cafe, One25, Alabare CCC / The Well, and practical support through St Nicholas Bread."
+      ]
+    },
+    {
+      "id": "st-nicholas-of-tolentino",
+      "meta": "Patron saint",
+      "title": "St Nicholas of Tolentino",
+      "paragraphs": [
+        "The parish's visual and spiritual language draws on themes linked with St Nicholas of Tolentino: the star of hope, the lily of purity, bread for the poor, humility, and prayer."
+      ]
+    },
+    {
+      "id": "parish-history",
+      "meta": "Parish archive",
+      "title": "Parish History",
+      "paragraphs": [
+        "The public gallery records baptisms, first Eucharist, confirmation, parish celebrations, and a 170 Anniversary archive that anchors the parish's recent historical memory."
+      ],
+      "links": [
+        {
+          "label": "Parish gallery",
+          "url": "gallery.html"
+        }
+      ]
+    },
+    {
+      "id": "parish-leadership",
+      "meta": "Leadership",
+      "title": "Parish Leadership",
+      "paragraphs": [
+        "Parish priest details and day-to-day office contact information are kept in the shared parish settings so they stay consistent across the site."
+      ]
+    },
+    {
+      "id": "synod-information",
+      "meta": "Synod and parish documents",
+      "title": "Synod Information",
+      "paragraphs": [
+        "Synod reports and parish listening documents can be updated here whenever new files are published."
+      ]
+    },
+    {
+      "id": "safeguarding",
+      "meta": "Safeguarding",
+      "title": "Safeguarding",
+      "paragraphs": [
+        "Safeguarding has its own page and is also linked from the footer for quick access."
+      ],
+      "links": [
+        {
+          "label": "Open the Safeguarding page",
+          "url": "safeguarding.html"
+        }
+      ]
+    }
+  ]
+}

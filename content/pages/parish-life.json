@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "eyebrow": "Parish Life",
+    "title": "A parish identity carried by people, hospitality, and shared work",
+    "lede": "Parish life at St Nick's holds together councils, ministry teams, catechesis, outreach, and welcome for people who arrive from many different walks of life.",
+    "image": "/uploads/parish-life.jpg"
+  },
+  "intro": {
+    "eyebrow": "Community Life",
+    "title": "Community life beyond the sanctuary",
+    "body": "The parish's public mission connects liturgy with practical service: food support, refugee accompaniment, youth-led worship, catechesis, and leadership shared across the community.",
+    "asideMeta": "Borderlands partnership",
+    "asideBody": "Borderlands works from the Assisi Centre, Lawford's Gate, Bristol, BS5 0RE. Enquiries: enquiries.borderlands@gmail.com."
+  },
+  "cards": [
+    {
+      "id": "parish-groups",
+      "meta": "Parish groups",
+      "title": "Parish Groups",
+      "items": [
+        "Parish Pastoral Council and Parish Finance Committee",
+        "Community Stewards, Community Elders, and Servant Leaders",
+        "Catechists and Children's Liturgy of the Word volunteers",
+        "Lay Ministers of the Eucharist and monthly youth-led Mass ministry",
+        "Deaf community, LGBTQ+ Mass community, and Clifton Catholic Fellowship",
+        "Ethiopian Orthodox Community hosted at St Nick's"
+      ]
+    },
+    {
+      "id": "foodbank",
+      "meta": "Practical support",
+      "title": "Foodbank",
+      "paragraphs": [
+        "St Nicholas Bread provides food and practical help for people struggling with money, food, and utilities."
+      ],
+      "items": [
+        "Open Monday, Wednesday, and Friday",
+        "Times: 10:00am-12:45pm",
+        "Manager: Michael Conway",
+        "Phone: 07482 425539"
+      ],
+      "links": [
+        {
+          "label": "St Nicholas Bread details",
+          "url": "parish-life.html#foodbank"
+        }
+      ]
+    },
+    {
+      "id": "refugee-borderlands",
+      "meta": "Refugee accompaniment",
+      "title": "Refugee / Borderlands Work",
+      "paragraphs": [
+        "The parish mission explicitly includes support for refugees, asylum seekers, and people facing exclusion."
+      ],
+      "items": [
+        "Borderlands partnership based at the Assisi Centre",
+        "Support for homeless and poor neighbours",
+        "Pastoral links with the Wild Goose Cafe",
+        "Parish involvement with One25 and Alabare CCC / The Well"
+      ]
+    },
+    {
+      "id": "parish-activities",
+      "meta": "Shared parish activity",
+      "title": "Parish Activities",
+      "paragraphs": [
+        "Recent parish diary items include pastoral council meetings, finance committee meetings, diocesan celebrations, and Bishop Bosco's visit.",
+        "The mission page also notes parish support for self-help gatherings such as AA and Over-eaters Anonymous."
+      ],
+      "links": [
+        {
+          "label": "Weekly highlights and current notices",
+          "url": "news-reflections.html#weekly-highlights"
+        }
+      ]
+    },
+    {
+      "id": "gallery",
+      "meta": "Parish archive",
+      "title": "Gallery",
+      "paragraphs": [
+        "The parish gallery includes baptisms, first Eucharist, confirmation, the 170 Anniversary, and community celebration images."
+      ],
+      "links": [
+        {
+          "label": "Open the gallery",
+          "url": "gallery.html"
+        }
+      ]
+    }
+  ]
+}

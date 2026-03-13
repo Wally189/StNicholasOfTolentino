@@ -1,0 +1,56 @@
+{
+  "hero": {
+    "eyebrow": "Newsletter Archive",
+    "title": "Bulletins, downloads, and parish documents in one place",
+    "lede": "Weekly newsletters and longer parish documents are gathered here so visitors can stay with the parish site when looking for recent updates or archived material.",
+    "image": "/uploads/hero-interior.jpg"
+  },
+  "intro": {
+    "eyebrow": "Bulletins & Downloads",
+    "title": "A clear home for weekly newsletters",
+    "body": "This page gives the parish a straightforward local archive for newsletters, synod papers, and other downloadable documents.",
+    "asideMeta": "Latest upload",
+    "asideTitle": "Latest parish bulletin",
+    "asideBody": "Upload a newsletter PDF in the CMS and it will appear here automatically."
+  },
+  "cards": [
+    {
+      "id": "latest-newsletter",
+      "meta": "Latest bulletin",
+      "title": "Most recent newsletter",
+      "paragraphs": [
+        "The newest bulletin appears first so parishioners can reach it quickly."
+      ]
+    },
+    {
+      "id": "newsletter-archive",
+      "meta": "Archive",
+      "title": "Newsletter Archive",
+      "paragraphs": [
+        "Every uploaded bulletin is listed here automatically in date order."
+      ]
+    },
+    {
+      "id": "parish-documents",
+      "meta": "Documents",
+      "title": "Parish Documents",
+      "paragraphs": [
+        "Synod papers, prayer resources, and parish reports stay available alongside the newsletter archive."
+      ]
+    },
+    {
+      "id": "archive-help",
+      "meta": "Need help?",
+      "title": "Prefer to ask the parish office",
+      "paragraphs": [
+        "If someone needs help finding a bulletin or document, direct them to the parish office during the published office hours."
+      ],
+      "links": [
+        {
+          "label": "Visit / Contact",
+          "url": "visit-contact.html#contact-details"
+        }
+      ]
+    }
+  ]
+}

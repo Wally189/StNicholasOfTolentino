@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "eyebrow": "Augustinian Roman Catholic Parish in Bristol",
+    "title": "Prayer, welcome, and charity in the spirit of St Nicholas of Tolentino.",
+    "welcome": "A calm, dignified parish home for liturgy, pastoral care, and community life: rooted in the Eucharist, attentive to the neighbour, and open to all who seek God.",
+    "slides": [
+      {
+        "image": "/uploads/hero-interior.jpg",
+        "alt": "Interior of St Nicholas of Tolentino church."
+      },
+      {
+        "image": "/uploads/hero-mass.jpg",
+        "alt": "Mass being celebrated at the altar."
+      },
+      {
+        "image": "/uploads/hero-community.jpg",
+        "alt": "Members of the parish community gathered near the church entrance."
+      }
+    ],
+    "buttons": [
+      {
+        "label": "Mass Times",
+        "href": "mass-services.html",
+        "style": "button-primary"
+      },
+      {
+        "label": "Livestream",
+        "href": "mass-services.html#livestream",
+        "style": "button-secondary"
+      },
+      {
+        "label": "Contact",
+        "href": "visit-contact.html#contact-details",
+        "style": "button-ghost"
+      }
+    ]
+  },
+  "quickMassIntro": {
+    "eyebrow": "Mass & Services",
+    "title": "Quick Mass Times",
+    "copy": "Sunday worship, weekday liturgy, confession, and livestream information as published by the parish."
+  },
+  "mission": {
+    "eyebrow": "Mission",
+    "title": "A parish identity shaped by worship, welcome, and service",
+    "paragraphs": [
+      "The visual language of this parish draws quietly on the story of St Nicholas of Tolentino: the star of hope, the lily of purity, bread for the poor, and Augustinian hospitality at the heart of parish life.",
+      "The parish's published mission joins worship with practical solidarity: support for refugees and asylum seekers, food and utility help for those in need, and partnerships with Borderlands, the Wild Goose Cafe, One25, and Alabare CCC."
+    ],
+    "bullets": [
+      "Prayer, welcome, and Augustinian community life held together",
+      "Foodbank, refugee support, and accompaniment of people on the margins",
+      "Synod listening, safeguarding, and parish leadership made visible online"
+    ],
+    "image": "/uploads/saint.jpg",
+    "imageAlt": "Painting of St Nicholas of Tolentino holding a lily.",
+    "caption": "St Nicholas of Tolentino remains the spiritual thread running through parish worship and service."
+  },
+  "parishLife": {
+    "eyebrow": "Parish Life & Outreach",
+    "title": "Community that looks outward",
+    "copy": "Parish groups, food support, refugee accompaniment, and shared worship all appear together in the parish's public life.",
+    "cards": [
+      {
+        "type": "image",
+        "meta": "Parish Activities",
+        "title": "Groups, leadership, and shared life",
+        "body": "Parish life includes the Parish Pastoral Council, Parish Finance Committee, Community Stewards, Community Elders, Servant Leaders, catechists, youth-led Mass ministry, and hosted Ethiopian Orthodox worship.",
+        "image": "/uploads/parish-life.jpg",
+        "imageAlt": "Members of the parish gathered inside the church."
+      },
+      {
+        "type": "text",
+        "meta": "Foodbank & Borderlands",
+        "title": "St Nicholas Bread and Borderlands",
+        "body": "St Nicholas Bread opens Monday, Wednesday, and Friday, 10:00am to 12:45pm. Borderlands is based at the Assisi Centre and accompanies refugees, asylum seekers, and people facing exclusion.",
+        "image": "/uploads/borderlands.png",
+        "imageAlt": "Borderlands logo"
+      },
+      {
+        "type": "link",
+        "meta": "Gallery",
+        "title": "Moments of worship and community",
+        "body": "The parish gallery includes baptisms, first Eucharist, confirmation, the 170 Anniversary, and community celebration images.",
+        "linkLabel": "Open the gallery",
+        "linkUrl": "gallery.html"
+      }
+    ]
+  },
+  "contactHighlight": {
+    "eyebrow": "Visit / Contact",
+    "title": "Come to church, speak to the parish office, or support the mission",
+    "copy": "Find the church, parish office, priest contacts, parking, safeguarding routes, and parish giving in one clear place."
+  }
+}

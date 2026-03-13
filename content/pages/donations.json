@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "eyebrow": "Donations",
+    "title": "Support the worship and charitable mission of St Nick's",
+    "lede": "Parish giving now has a clear local destination, alongside the charitable work and practical support the parish already makes visible.",
+    "image": "/uploads/hero-community.jpg"
+  },
+  "intro": {
+    "eyebrow": "Support the Mission",
+    "title": "Parish giving and outreach support together",
+    "body": "Use the parish giving link for St Nicholas itself, then follow the supporting links for parish-connected outreach and practical care.",
+    "asideMeta": "Secure parish giving",
+    "asideTitle": "Support St Nicholas Parish online",
+    "asideBody": "The live parish website currently uses MyDona for direct parish giving."
+  },
+  "cards": [
+    {
+      "id": "parish-giving",
+      "meta": "Parish giving",
+      "title": "Donate to St Nicholas Parish",
+      "paragraphs": [
+        "This is the parish's own giving route and should be the first option for supporting worship, ministry, and the day-to-day life of St Nick's."
+      ],
+      "note": "The donation page opens securely in a new tab."
+    },
+    {
+      "id": "support-parish-outreach",
+      "meta": "Outreach support",
+      "title": "Support parish-linked ministries",
+      "paragraphs": [
+        "St Nicholas Bread and the Borderlands partnership are both part of the parish's public witness of charity and practical solidarity."
+      ],
+      "items": [
+        "St Nicholas Bread offers food and practical help locally.",
+        "Borderlands accompanies refugees, asylum seekers, and people facing exclusion."
+      ]
+    },
+    {
+      "id": "practical-help",
+      "meta": "Other ways to help",
+      "title": "Prefer practical or pastoral support",
+      "paragraphs": [
+        "People often support the parish by volunteering, responding to appeals in the weekly notices, or speaking directly with the parish office."
+      ],
+      "links": [
+        {
+          "label": "Weekly highlights and notices",
+          "url": "news-reflections.html#weekly-highlights"
+        },
+        {
+          "label": "Parish life and outreach",
+          "url": "parish-life.html"
+        }
+      ]
+    },
+    {
+      "id": "contact-giving",
+      "meta": "Parish office",
+      "title": "Need help before you give?",
+      "paragraphs": [
+        "If you are unsure which giving route is right, contact the parish office and the parish can direct you appropriately."
+      ]
+    }
+  ]
+}

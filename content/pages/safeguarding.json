@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "eyebrow": "Safeguarding",
+    "title": "Safeguarding is a priority mission of the parish",
+    "lede": "Parish safeguarding contacts, diocesan reporting details, and linked safeguarding documents kept together in one clear place.",
+    "image": "/uploads/hero-interior.jpg"
+  },
+  "intro": {
+    "eyebrow": "Safeguarding Contacts",
+    "title": "Local and diocesan points of contact",
+    "body": "Safeguarding contacts can be updated here without touching the page layout. The parish representatives, diocesan team, and related documents are all pulled from the shared parish settings."
+  }
+}
