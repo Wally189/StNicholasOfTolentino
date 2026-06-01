@@ -2,6 +2,18 @@
 
 Static parish website built with plain HTML, CSS, and JavaScript, with editable content managed through Decap CMS.
 
+This repository is a portfolio-quality parish website example. It is intended to demonstrate practical digital support for a real-world community setting: clear public information, easy content updates, sensible governance, and documentation that non-technical parish staff or volunteers could understand.
+
+It is not primarily intended to show advanced software development. It is intended to show that Alan W Gallagher can understand an organisation's information needs, structure content clearly, support maintainability, and translate technical setup into ordinary operational guidance.
+
+## Portfolio position
+
+- **Classification:** Portfolio
+- **Project type:** parish/community website example
+- **Primary audience:** parish teams, small organisations, community volunteers, recruiters, collaborators, and hiring managers
+- **Core message:** clear, maintainable, people-centred website structure for a small community organisation
+- **Public status:** showcase candidate, subject to final checks and production authentication decisions
+
 ## Deployment
 
 - The public site is deployed from `main` with GitHub Pages via `.github/workflows/deploy-pages.yml`.
@@ -46,6 +58,14 @@ Static parish website built with plain HTML, CSS, and JavaScript, with editable 
 - Analytics or cookie tooling
 - Final legal text review before launch
 
+## What this demonstrates
+
+- ability to organise public-facing information for a non-technical organisation
+- understanding of editable content and basic content governance
+- ability to document what staff or volunteers can safely edit
+- awareness that website work is operational, not just visual
+- ability to use GitHub, static hosting, CMS configuration, and AI-supported workflows without presenting the work as magic
+
 ## Local support workflow
 
 Serve the site through a local web server before testing public pages, because the pages load JSON content with `fetch`.
@@ -66,3 +86,10 @@ The public editing guide for non-technical users is:
 
 - `how-to-update.html`
 - `HOW-TO-UPDATE-THIS-WEBSITE.md`
+
+## Repository management
+
+- `README.md` explains the repository and technical/content structure.
+- `PROJECT-STATUS.md` records portfolio classification and showcase rules.
+- Public-facing content should remain clear, respectful, and suitable for a Catholic parish setting.
+- No private parish, safeguarding, staff, volunteer, donor, or parishioner personal data should be committed.
